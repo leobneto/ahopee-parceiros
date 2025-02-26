@@ -1,0 +1,374 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background: #ffffff;
+    text-align: center;
+}
+
+/* HEADER */
+header {
+    background: linear-gradient(to right, #ff6a00, #ff914d);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.home-icon {
+    font-size: 22px;
+    color: white;
+    text-decoration: none;
+}
+
+.saldo {
+    background: #c80000;
+    padding: 5px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+/* CONTEÚDO */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 85vh;
+}
+
+/* CARTÃO PRINCIPAL */
+.card {
+    background: white;
+    width: 90%;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* TÍTULOS */
+h2 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.produto-img {
+    width: 100%;
+    max-width: 250px;
+    margin: 10px 0;
+}
+
+.pergunta {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 15px 0 10px;
+    text-align: center;
+}
+
+/* BOTÕES DE OPÇÕES */
+.opcoes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.btn {
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    transition: 0.3s;
+    background: #ff6a00;
+    color: white;
+}
+
+.btn:hover {
+    background: #ff914d;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 480px) {
+    header {
+        font-size: 16px;
+        padding: 10px 15px;
+    }
+
+    .saldo {
+        font-size: 13px;
+        padding: 4px 10px;
+    }
+
+    .card {
+        width: 95%;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .final-message {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      width: 90%;
+      max-width: 400px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      font-size: 22px;
+      font-weight: bold;
+      color: #333;
+      margin-top: 30px;
+  }
+  
+  .final-message h2 {
+      font-size: 24px;
+      color: #ff6a00;
+  }
+  
+  .final-message h3 {
+      font-size: 22px;
+      color: #000;
+      margin-top: 10px;
+  }
+  
+  /* ÍCONE DA CASINHA */
+  .home-link {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+  }
+  
+  .home-icon {
+      font-size: 40px;
+      color: #ff6a00;
+      text-decoration: none;
+      transition: 0.3s;
+  }
+  
+  .home-icon:hover {
+      color: #ff914d;
+  }
+
+  .home-container {
+    margin-top: 50px;
+    text-align: center;
+  }
+}
+
+.saldo-box {
+  background: linear-gradient(to right, #ff6a00, #ff914d);
+  padding: 20px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0 auto;
+}
+
+.saldo-img {
+  width: 50px;
+  display: block;
+  margin: 0 auto 10px;
+}
+
+.saldo-box p {
+  font-size: 18px;
+}
+
+.saldo-valor {
+  font-size: 24px;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* BOTÕES */
+.sacar-btn, .avaliacao-btn {
+  background: white;
+  color: #ff6a00;
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  max-width: 200px;
+  margin: 10px auto;
+  transition: 0.3s;
+}
+
+.sacar-btn:hover, .avaliacao-btn:hover {
+  background: #ffe1cc;
+}
+
+/* Botão de Iniciar Novas Avaliações */
+.avaliacao-btn {
+  background: #ff6a00;
+  color: white;
+  font-weight: bold;
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  max-width: 250px;
+  margin: 20px auto 0;
+  transition: 0.3s;
+  display: block;
+  text-align: center;
+}
+
+.avaliacao-btn:hover {
+  background: #ff914d;
+}
+
+/* MODAL */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.modal-content h3 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.modal-content input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.confirmar-saque {
+  background: #ff6a00;
+  color: white;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.confirmar-saque:hover {
+  background: #ff914d;
+}
+
+/* MENSAGEM FINAL APÓS SAQUE */
+.sucesso {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 300px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #ff6a00;
+  margin-top: 20px;
+}
+
+.shopee-logo img {
+  height: 30px;
+  width: auto;
+}
+
+/* Ajusta a casinha na home */
+.home-icon i {
+  font-size: 30px;
+  color: #ff6a00;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.home-icon i:hover {
+  color: #ff914d;
+}
+
+/* GRID DE DUAS COLUNAS PARA A TERCEIRA AVALIAÇÃO */
+.grid-2colunas {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 colunas */
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* Ajustando os botões */
+.grid-2colunas .btn {
+  width: 100%;
+  max-width: 120px; /* Evita que os botões fiquem muito grandes */
+  padding: 12px;
+  font-size: 16px;
+  text-align: center;
+  border-radius: 8px;
+  border: none;
+  background: #ff6a00;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Ajuste no hover */
+.grid-2colunas .btn:hover {
+  background: #ff914d;
+}
+
+/* Responsividade: Ajusta para telas muito pequenas */
+@media (max-width: 350px) {
+  .grid-2colunas {
+      grid-template-columns: repeat(1, 1fr); /* Se a tela for muito pequena, fica uma coluna */
+  }
+}
+
+
+

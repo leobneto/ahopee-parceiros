@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parceiros Shopee - Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+<body>
+  <header>
+    <div class="header-left">
+        <a href="index.html" class="home-icon">
+            <i class="fa-solid fa-house"></i>
+        </a>
+        <span class="logo">Parceiros Shopee</span>
+    </div>
+</header>
+
+    <main>
+        <div class="home-container">
+            <h2>Bem-vindo, Fernando Cheng</h2>
+
+            <div class="saldo-box">
+                <img src="images/wallet.png" class="saldo-img" alt="Saldo">
+                <p>Saldo atual:</p>
+                <span class="saldo-valor">R$ 125,00</span>
+                <button class="sacar-btn" onclick="abrirModal()">SACAR</button>
+            </div>
+
+            <button class="avaliacao-btn">Iniciar novas avaliações</button>
+        </div>
+    </main>
+
+    <!-- Modal de saque -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <h3>Quantidade a ser sacada</h3>
+            <input type="number" id="quantia-saque" placeholder="Digite o valor">
+            <button class="confirmar-saque" onclick="realizarSaque()">Sacar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
