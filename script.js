@@ -120,7 +120,6 @@ function realizarSaque() {
           Saque realizado com sucesso!
       </div>
   `;
-}
 
 // Inicia a primeira avaliação ao carregar a página
 document.addEventListener("DOMContentLoaded", carregarAvaliacao);
