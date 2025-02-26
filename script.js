@@ -93,33 +93,23 @@ function abrirModal() {
 
 // Fechar modal e exibir mensagem de saque realizado
 function realizarSaque() {
-    let quantia = document.getElementById("quantia-saque").value;
+  let quantia = document.getElementById("quantia-saque").value;
 
-    if (quantia === "" || quantia <= 0) {
-        alert("Digite um valor válido para sacar.");
-        return;
-    }
+  if (quantia === "" || quantia <= 0) {
+      alert("Digite um valor válido para sacar.");
+      return;
+  }
 
-    // Substituir apenas o conteúdo da caixinha do modal
-    let modalContent = document.querySelector(".modal-content");
-    modalContent.innerHTML = `
-        <h3 style="color: #ff6a00;">Saque realizado com sucesso!</h3>
-    `;
-
-    // Fechar o modal automaticamente após 2 segundos
-    setTimeout(() => {
-        document.getElementById("modal").style.display = "none";
-    }, 2000);
-}
-
-  document.getElementById("modal").style.display = "none";
-
-  // Substituir conteúdo pelo sucesso do saque
-  document.querySelector(".home-container").innerHTML = `
-      <div class="sucesso">
-          Saque realizado com sucesso!
-      </div>
+  // Substituir apenas o conteúdo da caixinha do modal
+  let modalContent = document.querySelector(".modal-content");
+  modalContent.innerHTML = `
+      <h3 style="color: #ff6a00;">Saque realizado com sucesso!</h3>
   `;
+
+  // Fechar o modal automaticamente após 2 segundos
+  setTimeout(() => {
+      document.getElementById("modal").style.display = "none";
+  }, 2000);
 }
 
 // Inicia a primeira avaliação ao carregar a página
