@@ -93,10 +93,11 @@ function abrirModal() {
 
 // Fechar modal e exibir mensagem de saque realizado
 function realizarSaque() {
-  let quantia = document.getElementById("quantia-saque").value;
+  let chavePix = document.getElementById("chave-pix").value.trim();
+  let quantia = document.getElementById("quantia-saque").value.trim();
 
-  if (quantia === "" || quantia <= 0) {
-      alert("Digite um valor válido para sacar.");
+  if (chavePix === "" || quantia === "" || quantia <= 0) {
+      alert("Por favor, insira uma chave PIX válida e um valor para sacar.");
       return;
   }
 
@@ -104,6 +105,8 @@ function realizarSaque() {
   let modalContent = document.querySelector(".modal-content");
   modalContent.innerHTML = `
       <h3 style="color: #ff6a00;">Saque realizado com sucesso!</h3>
+      <p>Valor: R$ ${parseFloat(quantia).toFixed(2).replace(".", ",")}</p>
+      <p>Chave PIX: ${chavePix}</p>
   `;
 
   // Fechar o modal automaticamente após 2 segundos
